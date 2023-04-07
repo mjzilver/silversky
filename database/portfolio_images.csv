@@ -1,0 +1,7 @@
+id,url,portfolio_id,portfolio_type,created_at,updated_at
+4,images/solute_numerology.png,2,App\Models\Portfolio,,
+5,images/solute_plugin_backend.png,2,App\Models\Portfolio,,
+6,images/solute_plugin_frontend.png,2,App\Models\Portfolio,,
+15,\images\1604099714dogcenter_frontpage.png,1,App\Models\Portfolio,2020-10-30 23:15:14,2020-10-30 23:15:14
+16,\images\1604099714dogcenter_plugin_backend.png,1,App\Models\Portfolio,2020-10-30 23:15:14,2020-10-30 23:15:14
+17,\images\1604099714dogcenter_plugin_frontend.png,1,App\Models\Portfolio,2020-10-30 23:15:14,2020-10-30 23:15:14

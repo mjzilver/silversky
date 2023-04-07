@@ -1,0 +1,68 @@
+CREATE TABLE IF NOT EXISTS `silversky_nlsilversky`.`login_attempts` (
+	`id`	int NOT NULL AUTO_INCREMENT,
+	`ip`	text NOT NULL,
+	`email`	text NOT NULL,
+	`password`	text NOT NULL,
+	`created_at`	datetime,
+	`updated_at`	datetime,
+	primary key(`id`)
+);
+CREATE TABLE IF NOT EXISTS `silversky_nlsilversky`.`portfolio_images` (
+	`id`	int NOT NULL AUTO_INCREMENT,
+	`url`	text NOT NULL,
+	`portfolio_id`	int NOT NULL,
+	`portfolio_type`	text NOT NULL DEFAULT 'App\Models\Portfolio',
+	`created_at`	datetime,
+	`updated_at`	datetime,
+	primary key(`id`)
+);
+CREATE TABLE IF NOT EXISTS `silversky_nlsilversky`.`portfolio` (
+	`id`	int NOT NULL AUTO_INCREMENT,
+	`title`	text NOT NULL,
+	`url`	text NOT NULL,
+	`description`	text NOT NULL,
+	`created_at`	datetime,
+	`updated_at`	datetime,
+	primary key(`id`)
+);
+CREATE TABLE IF NOT EXISTS `silversky_nlsilversky`.`services` (
+	`id`	int NOT NULL AUTO_INCREMENT,
+	`title`	text NOT NULL,
+	`url`	text NOT NULL,
+	`description`	text NOT NULL,
+	`short_description`	text NOT NULL,
+	`created_at`	datetime,
+	`updated_at`	datetime,
+	primary key(`id`)
+);
+CREATE TABLE IF NOT EXISTS `silversky_nlsilversky`.`failed_jobs` (
+	`id`	int NOT NULL AUTO_INCREMENT,
+	`uuid`	text NOT NULL,
+	`connection`	text NOT NULL,
+	`queue`	text NOT NULL,
+	`payload`	text NOT NULL,
+	`exception`	text NOT NULL,
+	`failed_at`	datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	primary key(`id`)
+);
+CREATE TABLE IF NOT EXISTS `silversky_nlsilversky`.`password_resets` (
+	`email`	text NOT NULL,
+	`token`	text NOT NULL,
+	`created_at`	datetime,
+	primary key(`id`)
+);
+CREATE TABLE IF NOT EXISTS `silversky_nlsilversky`.`users` (
+	`id`	int NOT NULL AUTO_INCREMENT,
+	`email`	text NOT NULL,
+	`password`	text NOT NULL,
+	`remember_token`	text,
+	`created_at`	datetime,
+	`updated_at`	datetime,
+	primary key(`id`)
+);
+CREATE TABLE IF NOT EXISTS `migrations` (
+	`id`	int NOT NULL AUTO_INCREMENT,
+	`migration`	text NOT NULL,
+	`batch`	int NOT NULL,
+	primary key(`id`)
+);
